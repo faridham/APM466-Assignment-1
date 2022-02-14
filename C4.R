@@ -2,8 +2,7 @@
 rm(list=ls())
 
 library(readxl)
-Bonds <- read_excel("~/Desktop/UofT/2021-22/WINTER 2022/APM466/Assignment 1/Data/Bonds?.xlsx", 
-                    range = "A2:P13")
+Bonds <- read_excel("~/Desktop/UofT/2021-22/WINTER 2022/APM466/Assignment 1/Data/Bonds.xlsx")
 
 ## Creating variables that measure the time to maturity of bonds for each day we collected data
 Bonds$ttm10 <- as.numeric(as.Date(Bonds$Maturity) - as.Date(as.character("2022/01/10"), format="%Y/%m/%d"))/365.25
